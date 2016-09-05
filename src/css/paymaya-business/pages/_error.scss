@@ -1,0 +1,71 @@
+#container.error {
+
+  #mePayLogo {
+      height: 50px;
+      width: 100px;
+      @include centered();
+      background-size: contain;
+      margin-top: 30px;
+    }
+
+  #main {
+    @include centered();
+    width: 100%;
+    margin-top: 40px;
+
+    h1 {
+      color: $error;
+      @include centered();
+    }
+
+    .text {
+      @include centered();
+    }
+
+    #continueRow {
+      @include centered();
+      min-height: 44px;
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      margin-top: 30px;
+      top: -20px;
+
+      .goBackLink {
+        display: inline-block;
+        color: #{$mepay-blue};
+        font-size: 14px;
+        height: 44px;
+        width: 44px;
+        background: url(#{$image-url}/button_icon_sprites.svg) 0 -315px no-repeat;
+        position: relative;
+        top: 32px;
+        overflow: hidden;
+        text-indent: -200%;
+      }
+
+      input[type=submit]{
+        display: inline-block;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 0;
+        margin: 0 10px;
+        padding: 10px;
+        background-color: #{$mepay-blue};
+        height: 44px;
+        width: 50%;
+        position: relative;
+        top: 16px;
+      }
+    }
+  }
+}
+
+
+@media #{$medium-up} {
+  #container.error {
+    #main {
+    }
+  }
+}

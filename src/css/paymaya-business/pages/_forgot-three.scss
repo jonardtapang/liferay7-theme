@@ -1,0 +1,63 @@
+#container.forgot.three {
+  #main {
+    #passwordRow {
+      margin: 40px 0 40px 0;
+      position: relative;
+      @include centered();
+
+      #password {
+        width: 90%;
+      }
+
+      #showPassword {
+        position: absolute;
+        z-index:1;
+        right: 8%;
+        top: 14px;
+        font-size: 0.9em;
+        text-decoration: none;
+        color: #{$placeholder};
+      }
+
+      .small.text {
+        position: absolute;
+        top: 45px;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .errmsg {
+        text-align: left;
+        width: 90%;
+        @include box-center();
+      }
+    }
+
+    #verificationRow {
+      margin: 0 0 30px 0;
+      position: relative;
+      @include centered();
+
+      #password2 {
+        width: 90%;
+      }
+
+      .errmsg {
+        text-align: left;
+        width: 90%;
+        @include box-center();
+      }
+    }
+  }
+}
+
+
+
+@media #{$medium-up} {
+  #container.forgot.three {
+    #main {
+      width: 290px;
+      padding-bottom: 20px;
+    }
+  }
+}

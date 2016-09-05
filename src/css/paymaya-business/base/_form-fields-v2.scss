@@ -1,0 +1,175 @@
+#mobileNumberRow {
+  margin: 10px 0;
+  position: relative;
+  width: 95%;
+
+  &:after {
+    display: block;
+    content: "▾";
+    position: absolute;
+    top: 9px;
+    left: 50px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  #country {
+    width: 72px;
+    text-indent: 200%;
+    @include border-radius(5px 0 0 5px);
+    position: absolute;
+    left:0;
+    top:0;
+    height: 38px;
+  }
+
+  #countryCode {
+    display: inline-block;
+    width: 65px;
+    text-align: center;
+    color: $placeholder;
+    font-weight: 500;
+    border-top: 2px solid $lines;
+    border-bottom: 2px solid $lines;
+    position: relative;
+    margin-left: 70px;
+    height: 38px;
+    top: 0;
+    padding-top: 10px;
+    font-size: 14px;
+    background-color: $v2-white;
+    z-index: 1;
+  }
+
+  #mobile {
+    //width: calc(100% - 103px);
+    box-sizing: border-box;
+    width: 100%;
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    //left: 120px;
+    left: 17px;
+    padding-left: 120px;
+    z-index: 0;
+    @include border-radius(0 5px 5px 0);
+    border-left: 0;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .flag {
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 5px;
+    z-index: 3;
+    background-size: 500px auto;
+  }        
+
+  .flagCover{
+    width: 72px;
+    height: 38px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: " ";
+    pointer-events: none;
+    @include border-radius(5px 0 0 5px);
+    border: 2px solid $lines;
+    background-color: $v2-white;
+    z-index: 2;
+  }
+
+
+
+  .small.text {
+    top: 5px;
+    text-align: left;
+    margin: 0;
+  }  
+}
+
+button {
+  appearance:normal;
+  -moz-appearance:normal;
+  -webkit-appearance:normal;
+  background-color: $v2-blue;
+  border: 0 none;
+  color: $v2-white;
+  @include border-radius(5px);
+  height: 38px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 100;
+  padding: 0 10px;
+}
+
+input[type="radio"]:empty {
+  margin-left: -999px;
+}
+
+input[type="radio"]:empty ~ label {
+  float: left;
+  position: relative;
+  padding-left: 60px;
+  margin-top: 15px;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: " ";
+    @include border-radius(100%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid $v2-lgray;
+    background-color: $v2-white;
+    left: 0;
+    top: 0;
+  }
+  &:after {
+    display: none;
+    background-color: $v2-white;
+  }
+}
+
+input[type="radio"]:checked ~ label {
+  float: left;
+  position: relative;
+  padding-left: 60px;
+  margin-top: 15px;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: " ";
+    @include border-radius(100%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid $v2-lgray;
+    background-color: $v2-white;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: " ";
+    @include border-radius(100%);
+    width: 10px;
+    height: 10px;
+    border: 0 none;
+    background-color: $v2-blue;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+input[type="text"], input[type="password"] {
+  @include border-radius(5px);
+  height: 38px;
+  font-size: 14px;
+}
+
+@media only screen and #{$medium-down} {
+  input[type="text"], input[type="password"] { width: 95%;}
+}

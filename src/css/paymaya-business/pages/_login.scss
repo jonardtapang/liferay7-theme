@@ -1,0 +1,316 @@
+#container.login.one {
+  #header {
+    background-color: #{$mepay-header-mobile};
+    padding: 10px;
+
+    #mePayLogo {
+      height: 45px;
+      width: 125px;
+      @include centered();
+    }
+  }
+
+  #main {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: #FFF;
+    @include box-center();
+    padding-top: 25px;
+
+    .cover {
+      text-align: center;
+    }
+
+    &:after {
+      @include clear();
+    }
+
+    .total {
+      display: none;
+    }
+
+    h1#title {
+      margin: 0 10px 10px;
+      @include centered();
+      font-weight: 400;
+      font-size: 21px;
+      color: $mepay-blue;
+      margin-bottom: 30px;
+    }
+
+    .text {
+      @include box-center();
+      width: 100%;
+      position: relative;
+      padding-top: 10px;
+    }
+
+    hr {
+      width: 90%;
+      position: relative;
+      @include centered();
+      margin: 29px auto 20px;
+      border: 1px solid #{$lines};
+      height: 1px;
+    }
+
+    .label {
+      color: #{$label-color};
+    }
+
+    .row {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .successMsg {
+      position: relative;
+      bottom: 0;
+      color: $mepay-green;
+      padding: 0;
+      @include centered();
+      top: -20px;
+      float: left;
+      width: 100%;
+      display: none;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .forgotLink {
+      color: #{$mepay-blue};
+      @include centered();
+      font-size: 14px;
+      display: block;
+    }
+
+    .regLink {
+      color: #{$mepay-blue};
+      position:relative;
+      display: inline;
+      width: 50px;
+    }
+
+    input[type=submit]{
+      -webkit-appearance: none;
+      appearance: none;
+      border: 0;
+      margin: 30px;
+      padding: 10px;
+      @include centered();
+      background-color: #{$mepay-blue};
+      height: 44px;
+      width: 90%;
+      max-width: 197px;
+    }
+
+    #mobileRow {
+      width: 100%;
+      position: relative;
+      margin: auto;
+      margin-bottom: 10px;
+      height: 59px;
+      max-width: 360px;
+
+      #mobile {
+        width: calc(100% - 52px);
+        float: left;
+        height: 59px;
+      }
+
+      .flag {
+        position: absolute;
+      }     
+
+      &:after {
+        @include clearfix();
+      }   
+
+
+      .errmsg {
+        bottom: 0;
+        left: 40px;
+        position: absolute;
+        
+      } 
+
+      &.error {
+        height: 80px;
+
+        input[type=text] {
+          border: 2px solid $error;
+        }
+
+        .errmsg {
+          display: block;
+        }
+      }
+
+    }
+
+    #passwordRow {
+      height: 59px;
+      position: relative;
+      margin: auto;
+      width: 100%;
+      max-width: 360px;
+
+      #password {
+        width: calc(100% - 52px);
+        float: left;
+        height: 59px;
+      }
+
+      #showPassword {
+        z-index:1;
+        right: 7%;
+        top: 22px;
+        text-decoration: none;
+        color: #{$placeholder};
+        position: absolute;
+      }
+
+      .small.text {
+        text-align: left;
+        margin: 0;
+      }
+
+      .errmsg {
+        bottom: 0;
+        left: 40px;
+        position: absolute;
+        
+      } 
+
+
+      &.error {
+        height: 80px;
+
+        input[type=text], input[type=password] {
+          border: 2px solid $error;
+        }
+
+        .errmsg {
+          display: block;
+        }
+      }
+
+
+      &:after {
+        @include clearfix();
+      }   
+    }
+  }
+
+
+  #loginForm  div.label.row{
+    &#mobileIcon,
+    &#passwordIcon{
+      display: block;
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin: 10px 2px 0 0;
+      text-indent: -500%;
+      overflow: hidden;    
+      background: url(#{$image-url}/login.svg)  no-repeat;    
+    }  
+
+    &#mobileIcon{
+      background-position: 10px 0px;
+    }
+
+    &#passwordIcon{
+      background-position: 10px -43px;
+    }
+  }
+}
+
+
+
+
+@media #{$medium-up} {
+  #container.login.one {
+    #header {
+      background-color: transparent;
+      #mePayLogo {
+        height: 50px;
+      }
+    }
+
+    #main {
+      padding-top: 30px;
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      border: 1px solid $lines;
+      border-bottom: 0;
+      background-color: #FFF;
+      max-width: 600px;
+      @include border-radius(5px);
+
+      .text:last-child {
+        background-color: $main-bg;
+        width: calc(100% + 4px);
+        left: -2px;
+      }
+
+      h1#title {
+        @include centered();
+        max-width: 325px;
+        padding-left: 10px;
+      }
+
+      #loginForm {
+        float: left;
+        @include box-center();
+        max-width: none;
+        width: 100%;
+        clear: both;
+        @include border-radius(5px);
+
+        #mobileRow {
+          float: none;
+          max-width: 325px;
+          display: block;
+
+          &:after {
+            @include clearfix();
+          }
+        }  
+
+        #passwordRow {
+          float: none;
+          max-width: 325px;
+          display: block;
+          margin-bottom: 30px;
+
+          &:after {
+            @include clearfix();
+          }
+        }
+        
+        &:after {
+          float: left;
+          content: " ";
+          clear: both;
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .cover {
+        height: 300px;
+        border-top: 1px solid $lines;
+        margin-top: 20px;
+      }
+
+      input[type=submit] {
+        max-width: 197px;
+      }
+    }
+  }
+}

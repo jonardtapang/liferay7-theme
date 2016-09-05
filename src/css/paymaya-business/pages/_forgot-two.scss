@@ -1,0 +1,50 @@
+#container.forgot.two {
+  #main {
+    #securityRow {
+      margin: 30px 0;
+      position: relative;
+      @include centered();
+
+      #securityQ, #securityA {
+        width: 90%;
+        margin-top: 5px;
+      }     
+
+      .errmsg {
+        text-align: left;
+        width: 90%;
+        @include box-center();
+      } 
+    }
+    #verificationRow {
+      margin: 30px 0;
+      position: relative;
+      @include centered();
+
+      #verification {
+        width: 90%;
+      }     
+
+      .errmsg {
+        text-align: left;
+        width: 90%;
+        @include box-center();
+      } 
+    }
+
+    #continueRow {
+      top: -30px;
+    }
+  }
+}
+
+
+@media #{$medium-up} {
+  #container.forgot.two {
+    #main {
+      width: 290px;
+      border: 1px solid $lines;
+      background-color: #FFF;
+    }
+  }
+}

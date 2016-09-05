@@ -1,0 +1,46 @@
+//Liferay AUI Override
+//@import "aui_override";
+
+// Config for urls
+@import "config/base_url";
+
+// This file imports all needed SCSS files
+@import "base/colors";
+@import "base/colors-v2";
+@import "base/mixins";
+@import "base/reset";
+@import "base/general";
+@import "base/flags";
+//@import "base/loader";
+
+//Site uses but is not fully-dependent on Foundation 5.
+//See foundation/settings for more global variables
+//@import "vendors/foundation/components/global";
+//@import "vendors/foundation/settings";
+//@import "vendors/foundation/components/grid";
+
+//@import "svg";
+
+// Pages
+@import "pages/error";
+@import "pages/congrats";
+@import "pages/smartIntegration";
+@import "pages/signup";
+@import "pages/signup-two";
+@import "pages/signup-three";
+@import "pages/login";
+@import "pages/forgot";
+@import "pages/forgot-two";
+@import "pages/forgot-three";
+@import "pages/dashboard";
+@import "pages/profile";
+@import "pages/top-up-centers";
+
+@import "pages/index";
+@import "pages/business";
+
+
+
+// v2 Components
+@import "base/header-v2";
+@import "base/form-fields-v2";

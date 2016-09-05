@@ -1,0 +1,345 @@
+#info.dashboard {
+  height: 7.875em;
+
+  #balance {
+    float: left;
+    width: 100%;
+    max-width: 23.938em;
+    height: 7.875em;
+    margin: 0;
+    padding: 0;
+
+    #baltitle {
+      margin: 10px 0 0 10px;
+      font-size: .75em;
+      color: $v2-mgray;
+      font-weight: 500;
+      float: left;
+      width: 100%;
+    }
+
+    #balUnit {
+      font-size: 1.5em;
+      color: $v2-dgray;
+      margin: 15px 0 0 10px;
+      font-weight: 300;
+      float: left;
+    }
+
+    #balAmount {
+      font-size: 2.625em;
+      font-weight: 200;
+      margin: 15px 0 0 15px;
+      float: left;
+    }
+
+    #balButton {
+      width: 1.625em;
+      height: 1.625em;
+      background-color: $v25-blue;
+      @include border-radius(5px);
+      float: left;
+      margin: 20px 0 0 15px;
+      position: relative;
+
+      a {
+        color: $v2-white;
+        text-decoration: none;
+        display: block;
+        font-size: 25px;
+        font-weight: 500;
+        position: absolute;
+        top: -2px;;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    &:after {
+      clear: both;
+      float: none;
+    }
+  }
+
+  #accountType {
+    float: left;
+    height: 1.5em;
+    width: 100%;
+    max-width: 23.938em;
+    margin: 0;
+    padding:0;
+
+    #acctTitle {
+      margin: 10px 0 0 10px;
+      font-size: .75em;
+      color: $v2-mgray;
+      font-weight: 500;
+      float: left;
+    }
+
+    #acctType {
+      margin: 10px 0 0 10px;
+      font-size: .75em;
+      color: $v2-mgray;
+      font-weight: 200;
+      float: left;
+    }
+
+    #acctUpgrade {
+      margin: 10px 0 0 10px;
+      float: left;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        font-size: .75em;
+        color: $v25-blue;
+        font-weight: 500;
+        float: left;
+      }
+    }
+
+    &:after {
+      clear: both;
+      float: none;
+    }
+  }
+
+  #acctStrength {
+    display: inline-block;
+    float: right;
+    width: 9.375em;
+    height: 6.25em;
+    position: relative;
+    top: .813em;
+    z-index: 0;
+
+    #strTitle {
+      font-size: .75em;
+      color: $v2-mgray;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      z-index: 0;
+    }
+
+    #strChart {
+      margin: auto;
+      left: 0;
+      right: 0;
+      display: block;
+      position: absolute;
+      top: 1.25em;
+      z-index: 0;
+    }
+  }
+
+  #virtualCard {
+    display: inline-block;
+    float: right;
+    width: 9.375em;
+    height: 6.25em;
+    position: relative;
+    top: .813em;
+    z-index: 0;
+    border-right: 1px solid $v2-lgray;
+    border-left: 1px solid $v2-lgray;
+
+    #vcTitle {
+      font-size: .75em;
+      color: $v2-mgray;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      z-index: 0;
+    }
+
+    #vcLink {
+      width: 5.625em;
+      height: 2.375em;
+      margin: 1.563em auto 0 auto;
+      left: 0;
+      right: 0;
+      border: 1px solid $v2-lgray;
+      background-color: $v2-lllgray;
+      @include border-radius(5px);
+
+      a {
+        font-size: .875em;
+        color: $v2-mgray;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-decoration: none;
+        padding-top: .75em;
+      }
+    }
+  }
+
+  &:after {
+    float: none;
+    clear: both;
+  }
+}
+
+#tabs.dashboard {
+  height: 3.125em;
+  z-index: 1;
+  position: relative;
+
+  ul {
+    width: 100%;
+    display: block;
+    height: 3.125em;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      width: calc(25% - 10px);
+      min-height: 3.125em;
+      height: 3.6em;
+      margin-right: 10px;
+      display: inline-block;
+      float: left;
+      text-align: center;
+      padding-top: 1.25em;
+      background-color: $v2-lgray;
+      color: $v2-mgray;
+      font-size: .875em;
+      cursor: pointer;
+      position: relative;
+
+      a {
+        color: $v2-mgray;
+        text-decoration: none;
+        position: relative;
+        left: .9375em;
+
+        &:before {
+          font-size: 16px;
+          width: 1.875em;
+          height: 1.875em;
+          content: " ";
+          display: block;
+          position: absolute;
+          background-color: $v2-gray;
+          opacity: .5;
+          left: -2.5em;
+          top: -.46875em;
+        }
+      }
+
+      &.selected {
+        color: $v2-lblue;
+        border-right: 1px solid $v2-lgray;
+        border-left: 1px solid $v2-lgray;
+        background-color: $v2-white;
+
+        &:before {
+          display: block;
+          content: " ";
+          background-color: $v2-lblue;
+          height: 3px;
+          width: calc(100% + 2px);
+          position: absolute;
+          top: 0;
+          left: -1px;
+        }
+
+        a {
+          color: $v2-lblue;
+
+          &:before {
+            background-color: $v2-lblue
+          }
+        }
+      }
+    }
+
+    li:last-child {
+      width: 25%;
+      margin-right: 0;
+    }
+    &:after {
+      float: none;
+      clear: both;
+    }
+  }
+}
+
+#content.dashboard {
+  border-top: 1px solid $v2-lgray;
+  background-color: $v2-white;
+  z-index: 0;
+  position: relative;
+  top: -1px;
+  width: 100%;
+  display: block;
+  float: left;
+
+  #mainInterface {
+    width: calc(100% - 300px);
+
+    #filters {
+      z-index: 1;
+      float: left;
+
+      #transType {
+        width: 110px;
+        height: 38px;
+        display: inline-block;
+        float: left;
+        margin: 0;
+        margin-right: 10px;
+      }
+
+      #dateRange {
+        width: 180px;
+        height: 38px;
+        display: inline-block;
+        float: left;
+        margin: 0;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+
+      #search {
+        width: 310px;
+        height: 38px;
+        display: inline-block;
+        float: left;
+        margin: 0;
+      }
+
+      &:after {
+        clear: both;
+        float: none;
+      }
+    } 
+
+    &:after {
+      clear: both;
+      float: none;
+    }
+  }
+
+  &:after {
+    clear: both;
+    float: none;
+  }
+}
+
+@media only screen and #{$medium-down} {
+  #info.dashboard {
+    #accountType, #acctStrength, #virtualCard { display:none; }
+  }
+
+  #content.dashboard {
+    #mainInterface {
+      width: 100%;
+    }
+  }
+}

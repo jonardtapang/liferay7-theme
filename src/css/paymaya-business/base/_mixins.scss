@@ -1,0 +1,147 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin centered() {
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin box-center() {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin row() {
+  display: block;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+@mixin clear() {
+  float: none;
+  clear: both;
+}
+
+@mixin border-strip(){
+  content: " ";
+  height: 3px;
+  width: 100%;
+  display: block;
+  background: #6dbd44;
+  background: -moz-linear-gradient(left,  #6dbd44 0%, #6dbd44 20%, #5688bb 20%, #5688bb 45%, #6dbd44 45%, #6dbd44 90%, #2fa3db 90%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#6dbd44), color-stop(20%,#6dbd44), color-stop(20%,#5688bb), color-stop(45%,#5688bb), color-stop(45%,#6dbd44), color-stop(90%,#6dbd44), color-stop(90%,#2fa3db));
+  background: -webkit-linear-gradient(left,  #6dbd44 0%,#6dbd44 20%,#5688bb 20%,#5688bb 45%,#6dbd44 45%,#6dbd44 90%,#2fa3db 90%);
+  background: -o-linear-gradient(left,  #6dbd44 0%,#6dbd44 20%,#5688bb 20%,#5688bb 45%,#6dbd44 45%,#6dbd44 90%,#2fa3db 90%);
+  background: -ms-linear-gradient(left,  #6dbd44 0%,#6dbd44 20%,#5688bb 20%,#5688bb 45%,#6dbd44 45%,#6dbd44 90%,#2fa3db 90%);
+  background: linear-gradient(to right,  #6dbd44 0%,#6dbd44 20%,#5688bb 20%,#5688bb 45%,#6dbd44 45%,#6dbd44 90%,#2fa3db 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6dbd44', endColorstr='#2fa3db',GradientType=1 );
+}
+
+@mixin console-border-strip(){
+  background-color: $console-bg;
+  background: -moz-linear-gradient(left,  #{$console-bg} 0%, #{$console-bg} 95%, #{$console-bg - 20} 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#{$console-bg}), color-stop(95%,#{$console-bg}), color-stop(100%,#{$console-bg - 20}));
+  background: -webkit-linear-gradient(left,  #{$console-bg} 0%,#{$console-bg} 95%,#{$console-bg - 20} 100%);
+  background: -o-linear-gradient(left,  #{$console-bg} 0%,#{$console-bg} 95%,#{$console-bg - 20} 100%);
+  background: -ms-linear-gradient(left,  #{$console-bg} 0%,#{$console-bg} 95%,#{$console-bg - 20} 100%);
+  background: linear-gradient(to right,  #{$console-bg} 0%,#{$console-bg} 95%,#{$console-bg - 20} 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$console-bg}', endColorstr='#{$console-bg - 20}',GradientType=1 );
+}
+
+@mixin dropdown() {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  content: '▾';
+  z-index: 3;
+  pointer-events: none;
+  background: transparent;
+  color: $text2;
+  line-height: 38px;
+  @include border-radius(3px);
+}
+
+@mixin super-break() {
+  /* FORCE word break */
+  -ms-word-break: break-all;
+
+  /* Be VERY careful with this, breaks normal words wh_erever */
+  word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin menu-shadow() {
+  -webkit-box-shadow: 0 2px 0 1px rgba(0,0,0,.1);
+  box-shadow: 0 2px 0 1px rgba(0,0,0,.1); 
+}
+
+@mixin arrow-up($sides, $bottom, $color) {
+  width: 0; 
+  height: 0; 
+  border-left: $sides solid transparent;
+  border-right: $sides solid transparent;
+  border-bottom: $bottom solid $color;
+  content: " ";
+}
+
+@mixin arrow-down($sides, $bottom, $color) {
+  width: 0; 
+  height: 0; 
+  border-left: $sides solid transparent;
+  border-right: $sides solid transparent;
+  border-top: $bottom solid $color;
+  content: " ";
+}
+
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes buttonHover {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+  100% { background-color: $v2-white; }
+}
+@-moz-keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@mixin button() {
+  min-height: 2.188em;
+  border: 1px solid $v2-lgray;
+  background-color: $v2-white;
+  padding: .625em;
+  font-size: .9em;
+  font-weight: 200;
+  cursor: pointer;
+  @include border-radius(5px);
+}

@@ -1,0 +1,485 @@
+.container {
+  @include box-center();
+  max-width: 60em;
+  width: 100%;
+  margin: 0 auto; 
+  padding: 0;
+}
+
+#header.v2 {
+  &:before {
+    @include border-strip();
+  }
+
+  height: 4.063em;
+  width: 100%;
+  border-bottom: 1px solid $v2-lgray;
+  background-color: $v2-white;
+  //position: fixed;
+  //@include menu-shadow();
+
+  #headerContent {
+    width: 100%;
+    height: 3.875em;
+    position: relative;
+
+    #PayMayaLogo {
+      width: 7.5em;
+      height: 2.125em;
+      display: block;
+      left: 0.813em;
+      top: 0.813em;
+      position: absolute;
+    }
+
+    #notificationsContainer {
+        top: 0.93em;
+        position: absolute;
+        right: 6.3em;
+        z-index: 3;
+
+      #notificationsIcon {
+        width: 1.563em;
+        height: 1.563em;
+        top: 0;
+        right: 1.09em;
+        background-color: $v2-dgray;
+        position: absolute;
+        cursor: pointer;
+      }
+
+      #notificationsDropdown {
+        width: 18.750em;
+        height: 14.813em;
+        background-color: $v2-white;
+        border: 1px solid $v2-lgray;
+        position: absolute;
+        display: block;
+        right: -.25em;
+        top: 2.9em;
+        border-radius: 0.313em;
+        @include menu-shadow();
+        display:none;
+        font-size: .875em;
+
+        &:before {
+          @include arrow-up(.84em, 1em, $v2-lgray);
+          position: absolute;
+          top: -1em;
+          right: 1.35em;
+        }
+
+        &:after {
+          @include arrow-up(.8em, 1em, $v2-white);
+          position: absolute;
+          top: -.95em;
+          right: 1.4em;
+        }
+
+        #title {
+          margin: .625em;
+        }
+
+        #notificationsList {
+          width: 17.500em;
+          height: 9.439em;
+          //border: 1px solid $v2-lgray;
+          //background-color: $v2-llgray;
+          margin: 0 .625em .625em .625em;
+
+          ul {
+            li {
+              width: 100%;
+              min-height: 3.438em;
+              padding: .625em 3.75em .625em 3.438em;
+              text-shadow: 1px 1px 2px $v2-white;
+              border-bottom: 1px solid  $v2-lgray;
+              position: relative;
+              color: $v2-gray;
+              cursor: pointer;
+              font-weight: 300;
+
+              &:before {
+                display: inline-block;
+                width: 3.438em;
+                height: 3.438em;
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+
+              &.request:before {
+                background-color: $v2-lblue;
+                opacity: .2;
+              }
+
+              &.notif:before {
+                background-color: $v2-lgray;
+                opacity: .4;
+              }
+
+              .phoneNum, .acct {
+                color: $v2-blue;
+                font-weight: 400;
+              }
+
+              .amount {
+                color: $v2-dgray;
+                text-shadow: 1px 1px 2px $v2-white;
+                font-weight: 400;
+              }
+
+              .age {
+                color: $v2-gray;
+                width: 3.75em;
+                height: 3.75em;
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: .625em;
+              }
+            }
+          }
+        }
+
+        #viewAll {
+          color: $v2-lblue;
+          padding: .75em;
+          position: relative;
+          height: 2.563em;
+          cursor: pointer;
+
+          &:after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 1.688em;
+            background-color: $v2-lgray;
+            opacity: .4;
+            content: " ";
+          }
+
+          #count {
+            position: absolute;
+            background-color: $v2-lgray;
+            color: $v2-dgray;
+            @include border-radius(5px);
+            height: 1.2em;
+            width: 1.75em;
+            text-align: center;
+            font-size: .8em;
+            right: 2em;
+            top:0;
+            bottom: 0;
+            margin: auto;
+          }
+        }
+      }
+
+      &:after {
+        width: 1.563em;
+        height: 1.563em;
+        top: 0;
+        right:-.25em;
+        position: absolute;
+        border-right: 1px solid $v2-llgray;
+        content: " ";
+      }
+    }
+
+    #menuContainer{
+      width: 3.125em;
+      height: 1.875em;
+      right: 2em;
+      top: 0.93em;
+      position: absolute;
+      z-index: 3;
+
+      #menuIconContainer {
+
+        width: 3em;
+        right: 0;
+        height: 1.5em;
+        top: 0;
+        position: absolute;
+        cursor: pointer;
+
+        #menuIcon {
+          width: 1.5em;
+          height: 1.5em;
+          right: 1.438em;
+          top: 0;
+          @include border-radius(100%);
+          background-color: $v2-dgray;
+          position: absolute;
+          cursor: pointer;
+
+          &:after {
+            color: $v2-gray;
+            font-family: sans-serif;
+            //content: '▾';
+            //font-size: 1.2em;
+            position: absolute;
+            @include arrow-down(.4em, .4em, $v2-gray);
+            right: -1.75em;
+            top: 0.55em;
+          }
+        }
+      }
+
+      #menuDropdown {
+        width: 17.563em;
+        max-height: 25.063em;
+        //height: calc(100vh - 3.875em);
+        background-color: $v2-white;
+        border: 1px solid $v2-lgray;
+        position: absolute;
+        display: block;
+        right: -1.75em;
+        top: 2.9em;
+        border-radius: 0.313em;
+        @include menu-shadow();
+        display:none;
+
+        #cutOff {
+
+          // width: 17.563em;
+          // max-height: 25.063em;
+          // height: calc(100vh - 3.875em);
+          // overflow-y: auto;
+          // overflow-x: hidden;
+          // -ms-overflow-style: none;
+
+          // &::-webkit-scrollbar { 
+          //     display: none; 
+          // }
+
+
+          #accountInfo {
+            height: 6.25em;
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid $v2-lgray;
+
+            #accountPic {
+              width: 5em;
+              height: 5em;
+              @include border-radius(100%);
+              display: block;
+              background-color: $v2-gray;
+              overflow: hidden;
+              position: relative;
+              left: 0.688em;
+              top: 0.688em;
+              float: left;
+
+              &:after {
+                width: 100%;
+                height: 33%;
+                bottom: 0;
+                background-color: $v2-lblue;
+                opacity: .7;
+                content: 'Change';
+                font-size: .75em;
+                text-align: center;
+                font-weight: 400;
+                padding-top: .5em;
+                color: $v2-white;
+                position: absolute;
+                display:none;
+              }
+
+              &:hover {
+                cursor: pointer;
+                &:after {
+                  display:block;
+                }
+              }
+            }
+
+            #accountName, #accountNum, #accountStrength {
+              width: 10em;
+              height: 1.313em;
+              display: block;
+              float: left;
+              margin: .625em 0 0 1.75em;
+              font-size: .875em;
+            }
+
+            #accountName {
+              @include ellipsis();
+              font-weight: 500;
+              color: $v2-mgray;
+            }
+
+            #accountNum {
+              font-weight: 300;
+              #flag {
+                width: 2.5em;
+                display: inline-block;
+              }
+              #phoneNum {
+                width: 7.5em;
+                display: inline-block;
+              }
+            }
+
+            #accountStrength {
+              font-weight: 300;
+              display: inline-block;
+
+              span {
+                display: inline-block;
+                font-weight: 400;
+                color: $v2-green;
+                padding-left: 1em;
+              }
+            }
+
+            &:after {
+              @include clear();
+            }
+          }
+
+          #menuList {
+            height: 15.313em;
+            overflow: hidden;
+            overflow-y: auto;
+            padding-left: 1.75em;
+            &>ul {
+              &>li {
+                margin-top: 1.75em;
+                font-weight: 300;
+                font-size: .875em;
+
+                &>a {
+                  text-decoration: none;
+                  color: $v2-mgray;
+
+                  &#upgrade {
+                    color: $v2-blue;
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+          }
+
+          #logOut {
+            height: 3.438em;
+            width: 100%;
+            position: relative;
+            float: left;
+            border-top: 1px solid $v2-lgray;
+            background-color: $v2-lllgray;
+            -webkit-border-radius: 0 0 .313em .313em;
+            border-radius: 0 0 .313em .313em;
+            -webkit-box-shadow: 0 -5px 10px 0 rgba(255,255,255,.9);
+            box-shadow: 0 -5px 10px 0 rgba(255,255,255,.9);
+
+            #logOutBtn {
+              @include button();
+              width: 5.5em;
+              position: absolute;
+              top: 0.626em;
+              bottom: 0.626em;
+              right: 0.626em;
+              text-align: center;
+            }
+          }
+
+        }
+
+        &:before {
+          @include arrow-up(.84em, 1em, $v2-lgray);
+          position: absolute;
+          top: -1em;
+          right: .85em;
+        }
+
+        &:after {
+          @include arrow-up(.8em, 1em, $v2-white);
+          position: absolute;
+          top: -.95em;
+          right: .925em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and #{$medium-down} {
+  #header.v2{
+    #headerContent {
+      #PayMayaLogo {
+        @include box-center();
+      }
+      #notificationsContainer {
+        right: auto;
+        left: 3.6em;
+
+        #notificationsDropdown {
+          right: auto;
+          left: -4.3em;
+          width: 102vw;
+
+          &:before {
+            right: auto;
+            left: 1.25em;
+          }
+
+          &:after {
+            right: auto;
+            left: 1.25em;
+          }
+
+          #notificationsList {
+            width: 97%;
+          }
+        }
+
+        &:after {
+          border-right: 0 none transparent;
+        }
+      }
+      #menuContainer {
+        right: 1.85em;
+
+        #menuDropdown {
+          width: 104vw;
+          right: -2.6em;
+
+          &:before {
+            right: 1.75em;
+          }
+
+          &:after {
+            right: 1.79em;
+          }
+
+          #cutOff {
+
+            #accountInfo {
+              #accountPic {
+                left: 1.69em;
+              }
+              #accountName, #accountNum, #accountStrength {
+                width: 64%;
+                margin: .625em 0 0 2.5em;
+              }
+            }
+
+            #logOut {
+              #logOutBtn {
+                right: 1.026em;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
