@@ -1,0 +1,107 @@
+.top-up-centers {
+    @extend .dashboard;
+
+    .center-listing {
+        padding: 0.5em 1em;
+        float: left;
+        width: 50%;
+    }
+
+    h3 {
+        padding: 0.5em 1em;
+        border-bottom: $text2 solid 1px;
+        color: $text;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-top: 0.5em;
+    }
+
+    ul.pagination {
+        margin: 1em;
+        text-align: right;
+        li {
+            display: inline-block;
+
+            &.active a {
+                background: $mepay-blue;
+                color: $white;
+            }
+
+            a {
+                border-radius: 3px;
+                color: $mepay-blue;
+                display: inline-block;
+                font-size: 0.9em;
+                margin: 0 0.25em;
+                padding: 0.25em 0.5em;
+                text-decoration: none;
+            }
+        }
+    }
+
+    ul.list {
+        width: 100%;
+        margin-top: 0.5em;
+        border-top: $text3 solid 1px;
+
+        li {
+            background: $white;
+            border-bottom: lighten($text3, 10%) solid 1px;
+            display: block;
+            position: relative;
+            width: 100%;
+
+            &:hover {
+                background: darken($white, 1%);
+                cursor: pointer;
+            }
+
+            a {
+                display: none;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            span {
+                display: inline-block;
+                padding: 1em;
+                width: 50%;
+                line-height: 1.4;
+                min-height: 4.5em;
+
+                &:nth-child(1){
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin: auto;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 50%;
+                    color: $text2;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #container.top-up-centers .center-listing {
+        width: 100%;
+    }
+}
+
+@media #{$medium-up} {
+  #container.top-up-centers #header #mePayLogo:after {
+    content: "Top Up Centers";
+}
+#container.top-up-centers .center-listing {
+    width: 50%;
+}
+}

@@ -1,0 +1,310 @@
+.profile {
+  @extend .dashboard;
+  text-align: center;
+
+  .successMsg {
+    text-align: left;
+    margin: 0 0 0 3.8em;
+    width: 80%;
+  }
+
+  #header {
+    a {
+      color: $text2;
+      // display: inline-block;
+      // float: right;
+      // padding: 1.5em;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #menu {
+
+    #menu-list {
+      text-align: left;
+    }
+  }
+
+  .button {
+    display: block;
+  }
+
+  #main {
+    padding-top: 85px;
+  }
+}
+
+.user {
+  padding-top: 110px;
+  padding-top: 80px;
+  position: relative;
+
+  .image {
+    @include border-radius(50%);
+    background-color: $text;
+    background-image: url(#{$image-url}/ProfilePicPlaceholder.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    display: none;
+    height: 5em;
+    position: relative;
+    width: 5em;
+
+    .edit {
+      background: $mepay-blue;
+      border: none;
+      @include border-radius(50%);
+      bottom: 0;
+      right: -0.25em;
+      display: inline-block;
+      height: 1.75em;
+      position: absolute;
+      width: 1.75em;
+
+      &:hover {
+        background: lighten($mepay-blue, 3%);
+      }
+    }
+  }
+
+  .info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2.5em;
+    top: 0.5em;
+  }
+
+  .name {
+    color: $text;
+    padding: 1em 0.5em 0.5em 0.5em;
+  }
+
+  .mobile {
+    color: $text2;
+  }
+
+  .message {
+    display: block;
+    font-size: 0.9em;
+    margin: 0.75em 0 0.75em auto;
+    width: 90%;
+
+    &.success {
+      color: darken($mepay-green, 5%);
+    }
+  }
+
+  form {
+    border-top: darken($lines, 5%) solid 1px;
+    color: $text;
+    margin: 0 1em;
+    padding: 1em 0;
+    text-align: right;
+
+    .fieldgroup {
+      margin-top: 0.75em;
+    }
+
+    input {
+      font-family: $roboto;
+      margin: 0.25em 0;
+      width: 80%;
+
+      &:disabled {
+        background: $main-bg;
+      }
+    }
+
+    .errmsg {
+      padding: 0.15em 0.25em 0.25em 21%;
+      text-align: left;
+    }
+
+    .showPassword {
+      color: $text3;
+      position: absolute;
+      right: 1.75em;
+      margin-top: 1.2em;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .field {
+      text-align: left;
+
+      &.submit {
+        margin-top: 0.5em;
+        text-align: center;
+
+        .button {
+          color: $white;
+          display: inline-block;
+          padding: 1em;
+          width: 60%;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .back {
+          float: none;
+          margin-right: 0.25em;
+          position: relative;
+          top: 0.9em;
+        }
+      }
+
+      .changed {
+        @include border-radius(5px);
+        background: $yellow-bg;
+        color: darken($yellow-bg, 45%);
+        position: absolute;
+        padding: 0.75em 1em;
+        text-align: center;
+        width: 70%;
+        display: none;
+      }
+
+      a {
+        color: $mepay-blue;
+        display: inline-block;
+        padding: 0.75em 0.5em;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .icon {
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 35px;
+        margin: 0.25em 0;
+        width: 20%;
+        float: left;
+
+        &.code {
+          background: url(#{$image-url}/misc_icons.svg);
+          background-size: 75px;
+          -webkit-filter: grayscale(100%);
+          width: 40px;
+          opacity: 0.5;
+          margin-left: 8px;
+          margin-right: 7px;
+        }
+
+        &.mail {
+          background-image: url(#{$image-url}/mail_icon.svg);
+          background-position: 0 -130px;
+          -webkit-filter: grayscale(100%);
+          opacity: 0.25;
+        }
+
+        &.key {
+          background-image: url(#{$image-url}/login.svg);
+          background-position: 12px -45px;
+        }
+
+        &.back {
+          background-image: url(#{$image-url}/button_icon_sprites.svg);
+          background-position: 0 -323px;
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+.verified {
+  position: relative;
+
+  &:after {
+    @include border-radius(50%);
+    background: $white;
+    background-image: url(#{$image-url}/misc_icons.svg);
+    background-position: -5px -5px;
+    content: '';
+    display: inline-block;
+    height: 1em;
+    position: absolute;
+    right: 1.5em;
+    width: 1em;
+  }
+
+  &.field:after {
+    right: 0.5em;
+    top: 1em;
+  }
+
+  input {
+    padding-right: 1.75em;
+  }
+}
+
+.hr {
+  border-bottom: $lines solid 1px;
+  margin: 1em 0;
+}
+
+input[type="password"] {
+  padding-right: 3.25em;
+}
+
+.button {
+  background: $mepay-blue;
+  border: none;
+  color: $white;
+  height: auto;
+  margin: 0.5em 0 0.5em auto;
+  width: 80%;
+  text-align: center;
+
+  &.inline {
+    display: inline-block;
+    width: 39%;
+
+  }
+
+  &.sub {
+    background: $mepay-blue2;
+    &:hover {
+      background: lighten($mepay-blue2, 3%);
+    }
+    &.white:hover {
+      background: $white;
+    }
+  }
+
+  &:hover {
+    background: lighten($mepay-blue, 3%);
+    text-decoration: none;
+  }
+
+
+    &.white:hover {
+      background: $white;
+    }
+}
+
+.panel {
+  background: $white;
+  border: $lines solid 2px;
+  @include border-radius(5px);
+  margin: auto;
+  width: 320px;
+}
+
+
+@media #{$medium-up} {
+  #container.profile #header #mePayLogo:after {
+    content: "Profile";
+  }
+}

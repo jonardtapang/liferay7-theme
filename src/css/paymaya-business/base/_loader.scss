@@ -1,0 +1,70 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background: rgba(0,0,0,.8);
+  z-index: 99999;
+  display:none;
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+    @include border-radius(100%);
+    background: rgba(255,255,255,.5);
+    margin: auto;
+    left:0;
+    right: 0;
+    top: calc(50% - 50px);
+    position: absolute;
+    animation: tibok  1s infinite;
+    -webkit-animation: tibok 1s infinite;
+    -moz-animation: tibok 1s infinite;
+    -o-animation: tibok  1s infinite;
+    z-index: 999999;
+  }
+
+  .message {
+    color: #FFF;
+    z-index: 999999;
+    text-align: center;
+    opacity: .6;
+    top: calc(50% + 60px);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+
+@-webkit-keyframes tibok {
+    0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes tibok { 
+    0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+@-o-keyframes tibok { 
+    0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+@keyframes tibok { 
+    0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}

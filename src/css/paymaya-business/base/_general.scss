@@ -1,0 +1,603 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+$roboto: 'Helvetica Nueue', 'Roboto', Helvetica, Arial, sans-serif;
+
+$medium-up: "only screen and (min-width:768px)";
+$medium-down: "(max-width:767px)";
+
+
+html, body {
+  overflow-x: hidden;
+  font-family: $roboto;
+  height: 100%;
+  position: relative;
+  display: block;
+  font-family: "Helvetica Neue",Roboto,Helvetica,Arial,sans-serif !important;
+}
+
+
+body {
+  color: $text !important;
+  position: relative;
+}
+
+
+.flag {
+  background: url(#{$image-url}/flags-flat-locked.svg) no-repeat;
+  height: 30px;
+  width: 40px;
+  pointer-events: none;
+  background-size: 690px auto;
+}
+
+#PayMayaLogo {
+  background: url(#{$image-url}/PayMaya_logo.svg) 50% 50% no-repeat;
+  background-size: contain;
+
+  // background: rgb(47,163,224); /* Old browsers */
+  // background: -moz-linear-gradient(left,  rgba(47,163,224,1) 0%, rgba(140,198,63,1) 100%); /* FF3.6+ */
+  // background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(47,163,224,1)), color-stop(100%,rgba(140,198,63,1))); /* Chrome,Safari4+ */
+  // background: -webkit-linear-gradient(left,  rgba(47,163,224,1) 0%,rgba(140,198,63,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -o-linear-gradient(left,  rgba(47,163,224,1) 0%,rgba(140,198,63,1) 100%); /* Opera 11.10+ */
+  // background: -ms-linear-gradient(left,  rgba(47,163,224,1) 0%,rgba(140,198,63,1) 100%); /* IE10+ */
+  // background: linear-gradient(to right,  rgba(47,163,224,1) 0%,rgba(140,198,63,1) 100%); /* W3C */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fa3e0', endColorstr='#8cc63f',GradientType=1 ); /* IE6-9 */
+
+}
+
+#notifications-container {
+  background: url(#{$image-url}/button_icon_sprites.svg) no-repeat -6px -246px;
+}
+
+#menu {
+  background: url('#{$image-url}/button_icon_sprites.svg') no-repeat -44px -484px;
+}
+
+.button {
+  height: 35px;
+  @include border-radius( 5px );
+  padding: 10px;
+  text-decoration: none;
+  font-family: $roboto;
+  font-weight: 300;
+  display: block;
+
+  &.green{
+    background-color: #{$mepay-green};
+    color: #{$white};
+  }
+
+  &.blue{
+    background-color: #{$mepay-blue2};
+    color: #{$white};
+  }
+
+  &.blue2{
+    background-color: #{$mepay-blue};
+    color: #{$white};
+  }
+
+  &.blue3{
+    background-color: #{$mepay-blue3};
+    color: #{$white};
+  }
+
+  &.blue4{
+    background-color: #{$mepay-blue4};
+    color: #{$white};
+  }
+
+  &.white{
+    background-color: #{$white};
+    color: #{$text2};
+  }
+}
+
+
+
+h1#title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#text {
+  font-weight: 300;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.small.text {
+  font-size: 14px;
+  color: #{$placeholder};
+
+  a {
+    color: #{$placeholder};
+  }
+}
+
+select, input {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 40px;
+  margin: 0;
+  border: 2px solid #{$lines};
+  padding: 10px;
+  @include border-radius(5px);
+}
+
+input[type=submit]{
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background-color: #{$mepay-blue};
+}
+
+.error {
+  border-color: $error !important;
+}
+
+.left {
+  float: left;
+  width: 100%;
+}
+
+.successMsg {
+  color: #{$mepay-blue2};
+  font-size: 16px;
+  height: 22px;
+  padding-top: 8px;
+  position: relative;
+
+  &:after {
+    width: 22px;
+    height: 22px;
+    background: url(#{$image-url}/misc_icons.svg) -5px -6px no-repeat;
+    background-size: 60px;
+    content: " ";
+    position: absolute;
+    margin-left: 1em;
+  }
+}
+
+.errmsg {
+  color: $error;
+  font-size: 14px;
+  min-height: 22px;
+  padding-top: 8px;
+  display: none;
+}
+
+// .overlay {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left:0;
+//   right:0;
+//   background: rgba(0,0,0,.3);
+//   z-index: 99999;
+//   display:none;
+
+//   .loader {
+//     width: 3em;
+//     height: 3em;
+//     z-index: 3;
+//     border: .25em solid rgba(0,0,0,.5);
+//     border-bottom: 3px solid rgba(255,255,255,.5);
+//     @include border-radius(100%);
+//     margin: auto;
+//     left:0;
+//     right: 0;
+//     top: 30%;
+//     position: absolute;
+//     -webkit-animation: revolve 1s infinite linear;
+//     -moz-animation: revolve 1s infinite linear;
+//     -o-animation: revolve 1s infinite linear;
+//     animation: revolve 1s infinite linear;
+//     z-index: 999999;
+//   }
+
+//   .msg {
+//     text-shadow: 0 0 3px $white;
+//     margin: auto;
+//     left: 0;
+//     right: 0;
+//     position: absolute;
+//     display: block;
+//     width: 90%;
+//     text-align: center;
+//     top: 45%;
+//     font-weight: 700;
+//     font-size: 30px;
+//   }
+// }
+
+
+// @-webkit-keyframes revolve { to { -webkit-transform: rotate(360deg); } }
+// @-moz-keyframes revolve { to { -moz-transform: rotate(360deg); } }
+// @-o-keyframes revolve { to { -o-transform: rotate(360deg); } }
+// @keyframes revolve { to { transform: rotate(360deg); } }
+
+
+
+
+#content {
+  #mainInterface {
+    .title { font-size: 24px; font-weight: 600; color: $v2-dgray; }
+    .text {font-size: 16px; font-weight: 400; color: $v2-mgray; line-height: 24px;
+      &.bold{font-weight: 500; color: $v2-ddgray;}
+      &.error{color: $v2-red; font-weight: 500;}
+    }
+    a { color: $v2-blue; }
+  }
+}
+
+#content.generic {
+  background-color: $v2-white;
+  z-index: 0;
+  position: relative;
+  top: -1px;
+  width: 100%;
+  display: block;
+  float: left;
+
+  #mainInterface {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    padding: 10px;
+    margin-top: 56px;
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    &:after {
+      clear: both;
+      float: none;
+    }
+  }
+
+  &:after {
+    clear: both;
+    float: none;
+  }
+}
+
+
+.content-sitemap {
+  min-height: 100% !important;
+}
+
+.sitemap-page {
+  max-width: 55em !important;
+  position: inherit !important;
+
+  ol {
+    list-style-type: decimal !important;
+    list-style-position: inside;
+  }
+
+  .title {
+    padding-bottom: 20px !important;
+    color: #00344e !important;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
+  .title-sub {
+    font-weight: 600;
+  }
+
+  .under-construction {
+    color: #bbbbbb !important;
+  }
+
+  .faq-list {
+    list-style-position: inside;
+    list-style-type: none !important;
+  }
+
+  .faq-list li span{
+    font-weight: bolder;
+  }
+
+  .faq-list li p{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .get-paymaya-list {
+    margin-left: 20px;
+    margin-top: 20px;
+
+    list-style-position: inside;
+    list-style-type: decimal !important;
+  }
+
+  .get-info-list {
+    margin-left: 5px;
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+
+
+}
+
+
+.display-nothing {
+  display: none;
+}
+
+
+
+#sitemap-footer {
+
+  width:100%;
+  background:#e2e2e2;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+
+
+
+
+  .text {
+    color: #acacac;
+    padding-bottom: 20px;
+  }
+
+  ul li {
+    margin-bottom: 15px;
+  }
+
+
+  li span{
+    color: #636363;
+    font-weight: bolder;
+  }
+
+  ul li a{
+    color: #3ca0de;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  ul li a:hover{
+    text-decoration: underline;
+  }
+
+  .section {
+      clear: both;
+      padding: 0px;
+      margin: 0px;
+    }
+
+
+  .col {
+      display: block;
+      float:left;
+      margin: 1% 0 1% 0%;
+    }
+  .col:first-child { margin-left: 0; }
+
+  .group:before,
+  .group:after { content:""; display:table; }
+  .group:after { clear:both;}
+  .group { zoom:1; }
+
+  .span_5_of_5 {
+    width: 100%;
+  }
+  .span_4_of_5 {
+    width: 80%;
+  }
+  .span_3_of_5 {
+    width: 60%;
+  }
+  .span_2_of_5 {
+    width: 40%;
+  }
+  .span_1_of_5 {
+    width: 20%;
+  }
+
+
+}
+
+@media only screen and #{$medium-down} {
+  #header.v2.generic{
+    border-bottom: 0 none;
+    &:before, &:after {
+      display: none;
+    }
+  }
+  #content.generic {
+    #mainInterface {
+      width: 100%;
+      margin-top: 20px;
+
+      button {
+        width: 95%;
+        margin: auto;
+        left: 0;
+        right: 0;
+
+      }
+    }
+  }
+
+  .sitemap-page {
+    font-size: 90% !important;
+  }
+
+  p {
+    font-size: 90% !important;
+  }
+
+  .faq-list li {
+      font-size: 90% !important;
+    }
+
+  .faq-list li p {
+      font-size: 90% !important;
+      margin-top: 10px !important;
+      margin-left: 10px !important;
+    }
+
+  .get-paymaya-list {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  #content.forgot #mainInterface .title {
+      font-size: 21px !important;
+  }
+
+  .topup-text {
+      font-size: 14px !important;
+    }
+
+
+  #sitemap-footer {
+
+    font-size: 90%;
+
+    .text {
+      padding-top: 15px;
+    }
+
+    .col {  margin: 1% 0 1% 0%; }
+    .span_1_of_5, .span_2_of_5, .span_3_of_5, .span_4_of_5, .span_5_of_5 { width: 100%; }
+  }
+}
+
+/* Zebra datepicker CSS */
+
+.Zebra_DatePicker *,
+.Zebra_DatePicker *:after,
+.Zebra_DatePicker *:before  { -moz-box-sizing: content-box !important; -webkit-box-sizing: content-box !important; box-sizing: content-box !important }
+
+.Zebra_DatePicker           { position: absolute; background: $date-bg; border: 1px solid $lines2; z-index: 100; padding: 40px 5px 5px 5px;}
+
+.Zebra_DatePicker *         { margin: 0; padding: 0; color: #373737; background: transparent; border: none }
+
+/* = GLOBALS
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker table                      { border-collapse: collapse; border-spacing: 0; width: auto; table-layout: auto; }
+
+.Zebra_DatePicker td,
+.Zebra_DatePicker th                         { text-align: center; padding: 5px 0 }
+
+.Zebra_DatePicker td                         { cursor: pointer }
+
+.Zebra_DatePicker .dp_daypicker,
+.Zebra_DatePicker .dp_monthpicker,
+.Zebra_DatePicker .dp_yearpicker             { margin-top: 3px }
+
+.Zebra_DatePicker .dp_daypicker td,
+.Zebra_DatePicker .dp_daypicker th,
+.Zebra_DatePicker .dp_monthpicker td,
+.Zebra_DatePicker .dp_yearpicker td         { width: 30px }
+
+.Zebra_DatePicker,
+.Zebra_DatePicker .dp_header .dp_hover,
+.Zebra_DatePicker td.dp_selected,
+.Zebra_DatePicker .dp_footer .dp_hover,
+.Zebra_DatePicker td.dp_hover               { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
+
+/* = VISIBLE/HIDDEN STATES (USE TRANSITIONS FOR EFFECTS)
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker.dp_visible               { display: block; visibility: visible; filter: alpha(opacity=100); -khtml-opacity: 1; -moz-opacity: 1; opacity: 1; transition: opacity 0.2s ease-in-out }
+.Zebra_DatePicker.dp_hidden                { display: none; visibility: hidden; filter: alpha(opacity=0); -khtml-opacity: 0; -moz-opacity: 0; opacity: 0 }
+
+/* = HEADER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_header td             { }
+
+.Zebra_DatePicker .dp_header .dp_previous,
+.Zebra_DatePicker .dp_header .dp_next       { width: 30px }
+
+.Zebra_DatePicker .dp_header .dp_caption    { font-weight: bold }
+.Zebra_DatePicker .dp_header .dp_hover      { background: #DEDEDE; color: #373737 }
+
+/* = DATEPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_daypicker th              { font-weight: bold }
+.Zebra_DatePicker td.dp_not_in_month            { color: #aeaeae; cursor: default }
+.Zebra_DatePicker td.dp_not_in_month_selectable { }
+.Zebra_DatePicker td.dp_weekend                 { }
+.Zebra_DatePicker td.dp_weekend_disabled        { color: #DEDEDE; cursor: default }
+.Zebra_DatePicker td.dp_selected                { background: #aeaeae; color: #FFF !important }
+.Zebra_DatePicker td.dp_week_number             { cursor: text; font-weight: bold }
+
+/* = MONTHPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_monthpicker td    { width: 33% }
+
+/* = YEARPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_yearpicker td     { width: 33% }
+
+/* = FOOTER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_footer            { margin-top: 3px }
+
+/* = SOME MORE GLOBALS (MUST BE LAST IN ORDER TO OVERWRITE PREVIOUS PROPERTIES)
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker td.dp_current             { color: #3A87AD }
+.Zebra_DatePicker td.dp_disabled_current    { color: #3A87AD }
+.Zebra_DatePicker td.dp_disabled            { color: #DEDEDE; cursor: default }
+.Zebra_DatePicker td.dp_hover               { background: #DEDEDE }
+
+/* = ICON
+----------------------------------------------------------------------------------------------------------------------*/
+button.Zebra_DatePicker_Icon                { display: block; position: absolute; width: 16px; height: 16px; background: url('calendar.png') no-repeat left top; text-indent: -9000px; border: none; cursor: pointer; padding: 0; line-height: 0; vertical-align: top }
+button.Zebra_DatePicker_Icon_Disabled       { background-image: url('calendar-disabled.png') }
+
+/* don't set vertical margins! */
+button.Zebra_DatePicker_Icon                { margin: 0 0 0 3px }
+button.Zebra_DatePicker_Icon_Inside         { margin: 0 3px 0 0 }
+
+.Zebra_DatePicker a.close {
+  text-indent: -500px;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  background: url('#{$image-url}/topUp_button.svg') no-repeat 0px -31px;
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-pointer-events:none;
+  -moz-pointer-events:none;
+  -ms-pointer-events:none;
+  -o-pointer-events:none;
+  pointer-events: none;
+}
+
+@media #{$medium-up} {
+  .Zebra_DatePicker {
+    padding: 5px;
+
+    .Zebra_DatePicker a.close {
+      display: none;
+    }
+  }
+}

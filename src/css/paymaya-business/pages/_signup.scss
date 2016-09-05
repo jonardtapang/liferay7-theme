@@ -1,0 +1,134 @@
+#container.signup {
+  #header{
+    #mePayLogo {
+      height: 50px;
+      width: 125px;
+      @include centered();
+    }
+  }
+
+  #main {
+    h1#title {
+      @include centered();
+    }
+  }
+}
+
+
+#container.signup.one {
+  #header {
+    @include row();
+
+    #signIn.green.button {
+      float: right;
+      margin: 10px;
+      font-weight: 700;
+      font-size: 14px;
+
+      &:after {
+        @include clearfix();
+      }
+    }
+
+    #signUp.blue.button {
+      display: none;
+    }
+
+    #mePayLogo {
+      width: 110px;
+      height: 48px;
+      margin: 50px auto 37px; 
+    }
+  }
+
+
+  #main {
+    .blue.button {
+      @include centered();
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 172px;
+      height: 48px;
+      padding: 17px 0;
+    }
+
+    .text {
+      @include centered();
+      width: 250px;
+    }
+  }
+}
+
+
+
+@media #{$medium-up} {
+  body{
+    background-color: $main-bg;
+  }
+
+  #container.signup.one {
+    #header {
+      background-color: #FFF;
+      max-width: 960px;
+      @include box-center();
+      @include clear();
+      display: block;
+      border-top: 0 solid $mepay-blue;
+      height: 74px;
+
+      &:before {
+        @include border-strip();
+      }
+
+
+      #mePayLogo {
+        margin: 10px 0 0 10px;
+        left: 0;
+        right: initial;
+      }
+
+
+
+      #signIn.green.button {
+        background-color: $mepay-blue;
+      }
+
+      #signUp.blue.button {
+        display: block;
+        float: right;
+        margin: 10px 10px 10px 0;
+        font-weight: 700;
+        font-size: 14px;
+
+        &:after {
+          @include clearfix();
+        }
+      }
+    }
+    #main {
+      position: relative;
+      max-width: 960px;
+      @include box-center();
+      @include clear();
+      padding-top: 63px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        content: " ";
+        opacity: .2;
+        min-height: 92vh;
+      }
+
+      .text {
+        width: 420px;
+      }
+
+    }
+  }  
+}

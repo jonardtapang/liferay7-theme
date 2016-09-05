@@ -1,0 +1,695 @@
+
+.header-paymaya {
+	background-image: url(#{$image-url}/boylaptop.jpg);
+	background-size: cover;
+	padding-top: 0px !important;
+	padding-bottom: 50px !important;
+
+	h2 {
+		display: table;
+		margin: 100px auto;
+
+
+		font-size: 28pt;
+		color: #00344e;
+		text-align: left;
+		font-style: normal;
+		line-height: 29pt;
+		/*letter-spacing: .25px;*/
+
+		span {
+			color: #177fff;
+			font-style: italic;
+			font-weight: bolder;
+		}
+	}
+
+	.subscribe-text {
+		position: absolute;
+		top: 20px;
+		right: 7%;
+
+		color: #00344e;
+		text-decoration: underline;
+		font-size: 11pt;
+		font-weight: 300;
+		cursor: pointer;
+	}
+
+
+	.subscribe-text:hover {
+		color: #011d2b;
+	}
+}
+
+.mock-paymaya {
+	background-color: #177fff !important;
+	padding-top: 20px !important;
+	padding-bottom: 0px !important;
+
+	img {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.col {
+		margin-bottom: 0 !important;
+	}
+
+	.text-copy {
+		display: table;
+		margin: 0px auto;
+		margin-top: 60px;
+		margin-left: -1%;
+		margin-right: 10%;
+	}
+
+	h2 {
+		font-size: 24pt;
+		color: #FFF;
+		text-align: right;
+		font-style: normal;
+		font-weight: 300;
+
+		span {
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+
+	h3 {
+		margin-top: 20px;
+
+		font-size: 16pt;
+		line-height: 17pt;
+		color: #FFF;
+		text-align: right;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+
+}
+
+.visa-paymaya {
+	background-image: url(#{$image-url}/girlphone.jpg);
+	background-size: cover;
+	padding-top: 0px !important;
+	padding-bottom: 80px !important;
+
+
+	.text-copy {
+		display: table;
+		margin: 0px auto;
+		margin-top: 100px;
+	}
+
+	h2 {
+		font-size: 24pt;
+		color: #00344e;
+		text-align: left;
+		font-style: normal;
+		line-height: 25pt;
+
+		span {
+			color: #177fff;
+			font-style: italic;
+			font-weight: bolder;
+		}
+	}
+
+	h3 {
+		margin-top: 20px;
+
+		font-size: 15pt;
+		line-height: 17pt;
+		color: #00344e;
+		text-align: left;
+		font-style: normal;
+		font-weight: 400;
+	}
+}
+
+.signup-paymaya {
+	background-color: #8dc640 !important;
+	padding-top: 45px !important;
+	padding-bottom: 45px !important;
+
+	h2 {
+		font-size: 24pt;
+		color: #FFF;
+		text-align: center;
+		font-style: normal;
+		line-height: 25pt;
+		font-weight: 300;
+
+		margin-bottom: 30px;
+	}
+
+	h3 {
+		font-size: 16pt;
+		color: #FFF;
+		text-align: center;
+		font-style: normal;
+		line-height: 17pt;
+		font-weight: 300;
+	}
+
+	#mc_embed_signup {
+		display: table;
+		margin: 10px auto;
+	}
+
+	.email {
+		  border: 1px solid #FFF;
+		  width: 300px;
+		  font-size: 12pt;
+		  font-weight: 300;
+	}
+
+	.btn-subscribe {
+		width: 120px;
+  		margin-left: 10px;
+  		font-weight: 400;
+  		background-color: #177fff !important;
+  		border: 1px solid #177fff !important;
+			color: #FFF !important;
+	}
+}
+
+.footer-paymaya {
+	background-color: #e2e2e2 !important;
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+
+	p {
+		color: #c2c2c2;
+		text-align: left;
+		font-size: 11pt;
+		margin-left: 5%;
+	}
+}
+
+.paymaya-logo-index {
+	max-width: 150px;
+	margin-left: 5%;
+	margin-top: 10px;
+}
+
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+.span_6_of_6 {
+	width: 100%;
+}
+
+.span_5_of_6 {
+  	width: 83.33%;
+}
+
+.span_4_of_6 {
+  	width: 66.66%;
+}
+
+.span_3_of_6 {
+  	width: 50%;
+}
+
+.span_2_of_6 {
+  	width: 33.33%;
+}
+
+.span_1_of_6 {
+  	width: 16.66%;
+}
+
+
+// new index
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background: #00344e !important;
+}
+
+.container-0 {
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+#index-header{
+  position:fixed;
+  height: 60px;
+  display:block;
+  width: 100%;
+  background: #FFFFFF;
+  z-index:9;
+  padding: 20px 0 0 0;
+	top:0px;
+
+	.paymaya-logo-index-0 {
+		max-width: 125px;
+		margin-top: -4px;
+	}
+
+	.subscribe-cta {
+  	position: absolute;
+		top: 16px;
+		right: 7%;
+		background-color: #2fa3e0;
+		color: #FFF;
+		font-size: 10.5pt;
+		letter-spacing: .25px;
+		padding: 10px 15px;
+		text-decoration: none;
+		font-weight: bolder;
+
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	.subscribe-cta:hover {
+		background-color: #1fa7ee;
+	}
+
+}
+
+
+
+
+
+#fullpage {
+	.text-left {
+		text-align: right;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 24pt;
+	}
+	.text-right {
+		text-align: left;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 24pt;
+	}
+
+	.button {
+		font-weight: bold;
+		margin: 0 auto !important;
+	}
+
+	input {
+		margin: 0 auto !important;
+		display: table;
+		width: 98% !important;
+	}
+}
+
+#section0 {
+	background-image: url(#{$image-url}/background_1.png);
+	background-size: cover;
+	background-position: center;
+}
+#section1 {
+	background-image: url(#{$image-url}/background_2.png);
+	background-size: cover;
+	background-position: center;
+}
+#section2 {
+	background-image: url(#{$image-url}/background_3.png);
+	background-size: cover;
+	background-position: center;
+}
+#section3 {
+	background-image: url(#{$image-url}/background_4.png);
+	background-size: cover;
+	background-position: center;
+}
+#section4 {
+	background-image: url(#{$image-url}/background_5.png);
+	background-size: cover;
+	background-position: center;
+
+	h2 {
+		text-align: center;
+    font-weight: bold;
+    color: #2f2f2f;
+    font-size: 24pt;
+	}
+
+	.mt {
+		margin-top: 50px;
+	}
+
+	.social-icon {
+		padding: 30px;
+		display: table;
+		margin: 10px auto;
+	}
+
+	.footer-fix {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		background-color: #FFF;
+
+
+		h3 {
+			color: #c4c4c4;
+			font-size: 14pt;
+			text-align: left;
+			padding-top: 20px;
+			padding-bottom: 30px;
+		}
+	}
+
+	.mailchimp-form {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.tbl-social {
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+.mobile-screen {
+  margin: auto;
+  position: absolute;
+  top: 40px; left: 0; bottom: 0; right: 0;
+	width: 70%;
+	height: 70%;
+	z-index: 1000;
+
+	background-image: url(#{$image-url}/nexus5_clear_desktop.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+
+.img-screen {
+  margin: auto;
+  position: absolute;
+  top: 20px; left: 0; bottom: 0; right: 0;
+	width: 57%;
+	height: 57%;
+	z-index: 990;
+
+	background-image: url(#{$image-url}/screen_1_desktop.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+
+.display-nothing {
+	display: none;
+}
+
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+	.text-copy {
+			margin-left: 5%;
+		}
+
+		.business-head-text {
+			font-weight: 400;
+			color: #00344e;
+			font-size: 32pt;
+			text-align: left;
+			line-height: 32pt;
+		}
+
+		.business-body-text {
+			font-weight: 300;
+			color: #00344e;
+			font-size: 13pt;
+			text-align: left;
+			line-height: 15pt;
+		}
+
+	#fullpage {
+		.text-left, .text-right {
+			text-align: center !important;
+			font-size: 14pt;
+		}
+
+		.text-right {
+			margin-top: 30px;
+		}
+
+		.img-placeholder-0 {
+			height: 70vh;
+		}
+
+	}
+
+
+
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}
+
+@media only screen and (max-width: 40em) {
+
+	.container-0 {
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+
+
+
+	#section4 {
+
+		h2 {
+	    font-size: 13pt !important;
+			margin-top: 5px;
+		}
+
+		.mt {
+			margin-top: 15px;
+		}
+
+		.social-icon {
+			padding: 10px;
+			display: table;
+			margin: 5px auto;
+		}
+
+		.mailchimp-form {
+			display: table;
+			margin: 0 auto;
+		}
+
+		.footer-fix {
+			h3 {
+				font-size: 10pt;
+				padding-top: 8px;
+				padding-bottom: 40px;
+			}
+		}
+
+		.tbl-social {
+			display: table;
+			margin: 0 auto;
+		}
+	}
+
+	#fullpage {
+		.text-left, .text-right {
+			text-align: center !important;
+			font-size: 13pt;
+		}
+
+		.text-right {
+			margin-top: 50px;
+		}
+
+		.img-placeholder-0 {
+			height: 60vh;
+		}
+
+		input {
+			width: 75% !important;
+		}
+
+	}
+
+
+
+	.mobile-screen {
+	  top: 40px; left: 0; bottom: 0; right: 0;
+		width: 60%;
+		height: 60%;
+	}
+
+	.img-screen {
+	  top: 28px; left: 0; bottom: 0; right: 0;
+		width: 49%;
+		height: 49%;
+	}
+
+	#index-header{
+		height: 50px;
+		padding: 15px 0 0 0;
+
+		.paymaya-logo-index-0 {
+			max-width: 110px;
+			margin-top: 0 !important;
+		}
+
+		.subscribe-cta {
+			top: 10px;
+			right: 3%;
+		}
+	}
+
+	.header-paymaya {
+		background-image: url(#{$image-url}/boylaptop-small.jpg);
+		padding-bottom: 5px !important;
+
+		h2 {
+			margin: 100px 5%;
+			font-size: 19pt;
+			line-height: 20pt;
+			margin-bottom: -10px;
+
+		}
+
+	}
+
+	.visa-paymaya {
+		background-image: url(#{$image-url}/girlphone-small.jpg);
+		padding-bottom: 5px !important;
+		padding-top: 50px !important;
+
+		.text-copy {
+			margin-left: 5%;
+		}
+
+		h2 {
+			font-size: 16pt;
+			line-height: 17pt;
+			margin-bottom: -20px;
+
+		}
+
+		h3 {
+			margin-top: 30px;
+			font-size: 13pt;
+			line-height: 14pt;
+		}
+
+	}
+
+	.mock-paymaya {
+		padding-bottom: 40px !important;
+		padding-top: 40px !important;
+
+		.text-copy {
+			display: table;
+			margin: 0px auto;
+			margin-top: 10px;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		img {
+			max-width: 70%;
+		}
+
+		h2 {
+			font-size: 18pt;
+			color: #FFF;
+			text-align: center;
+			font-style: normal;
+			font-weight: 300;
+
+			span {
+				font-style: italic;
+				font-weight: bold;
+			}
+		}
+
+		h3 {
+			margin-top: 20px;
+
+			font-size: 14pt;
+			line-height: 15pt;
+			color: #FFF;
+			text-align: center;
+			font-style: normal;
+			font-weight: 400;
+		}
+	}
+
+	.signup-paymaya {
+		padding-top: 30px !important;
+		padding-bottom: 30px !important;
+
+		h2 {
+			font-size: 21pt;
+			line-height: 22pt;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		h3 {
+			font-size: 13pt;
+			line-height: 14pt;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		.email {
+			border: 1px solid #FFF;
+			width: 100%;
+			font-size: 12pt;
+			font-weight: 300;
+		}
+
+		.btn-subscribe {
+			width: 120px;
+	  		margin-left: 3px !important;
+	  		font-weight: 400;
+	  		background-color: #177fff !important;
+	  		border: 1px solid #177fff !important;
+		}
+	}
+
+	.footer-paymaya {
+
+		p {
+			font-size: 9pt;
+		}
+	}
+
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+
+
+
+}

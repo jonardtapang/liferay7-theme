@@ -1,0 +1,199 @@
+#container.signup.three {
+  background-color: #{$main-bg};
+  height: 100%;
+
+  #header {
+    background-color: #{$mepay-header-mobile};
+    padding: 10px;
+
+    .username {
+      position: relative;
+      padding:0;
+      height: 50px;
+      display: none;
+
+      .pic{
+        width:32px;
+        height: 32px;
+        display: block;
+        display: none;
+        float: left;
+        background-size: cover;
+        background-position: 50% 50%;
+        @include border-radius(100%);
+        margin: 10px;
+      }
+      .name {
+        display: block;
+        float: left;
+        margin-top: 20px;
+      }
+    }
+  }
+
+
+  #main {
+    max-width: 480px;
+    @include box-center();
+    background-color: #{$main-bg};
+
+    .username {
+      position: relative;
+      padding:0;
+      height: 50px;
+      border-bottom: 2px solid #{$lines};
+      display: block;
+
+      .pic{
+        width:32px;
+        height: 32px;
+        display: block;
+        display: none;
+        float: left;
+        background-size: cover;
+        background-position: 50% 50%;
+        @include border-radius(100%);
+        margin: 10px;
+      }
+      .name {
+        display: block;
+        float: left;
+        margin-top: 20px;
+      }
+    }
+
+    h1#title, .text {
+      margin: 0 10px 10px 10px;
+    }
+
+    .text {
+      color: #{$text};
+
+      &.small a {
+        color: #{$mepay-blue};
+      }
+    }
+
+    .label {
+      color: #{$label-color};
+    }
+
+    .row {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .lighterbox {
+      background-color: #FFF;
+      padding-top: 20px;
+      padding-bottom: 30px;
+
+      .phonePrompt {
+          margin-top: 30px;
+      }
+
+      .phone{
+        a {
+          color: #{$mepay-blue};
+        }
+      }
+    }
+
+    input[type=submit]{
+      -webkit-appearance: none;
+      appearance: none;
+      border: 0;
+      margin: 30px;
+      padding: 10px;
+      @include centered();
+      background-color: #{$mepay-blue};
+      height: 44px;
+      width: 90%;
+    }
+  }
+
+  #verifyForm {
+    margin-top: 20px;
+
+    #verification {
+      width: 98%;
+    }
+  }
+
+  .successMsg {
+    text-align: center;
+    width: 100%;
+    padding-top: 2em;
+  }
+}
+
+
+
+
+@media #{$medium-up} {
+  #container.signup.three {
+    #header {
+      background-color: #{$main-bg};
+      padding: 10px;
+      max-width: 640px;
+      @include box-center();
+      position: relative;
+
+      #mePayLogo {
+        margin: 0;
+        left: 0;
+        top: 0;
+      }
+
+      .username {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 12px;
+      }
+    }
+
+
+    #main {
+      width: 100%;
+      max-width: 650px;
+      @include centered();
+      border-top: 1px solid $lines;
+      border-bottom: 1px solid $lines;
+      margin-top: 30px;
+
+      .username {
+        display: none;
+      }
+
+      .lighterbox {
+        width: 320px;
+        display: inline-block;
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+
+    #verifyForm {
+      width: 320px;
+      display: inline-block;
+      text-align: left;
+      margin-top: 0;
+
+      .successMsg {
+        position: absolute;
+        margin-top: 30px;
+        width: 300px;
+        @include centered();
+        display: none;
+      }
+
+      input[type=submit] {
+        position: absolute;
+        margin-top: 90px;
+        width: 300px;
+      }
+    }
+  }
+}

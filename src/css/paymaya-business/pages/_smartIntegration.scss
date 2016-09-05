@@ -1,0 +1,188 @@
+#container.smartIntegration {
+
+  #header {
+    @include centered();
+  }
+
+  #mePayLogo {
+      height: 50px;
+      width: 100px;
+      background-size: contain;
+      margin-top: 30px;
+      display: inline-block;
+    }
+
+  #smartMoneyLogo {
+    height: 50px;
+    width: 100px;
+    margin-top: 30px;
+    background: url(#{$image-url}/fundSourcesIcon.svg) 50% 0 no-repeat;
+    display: inline-block;
+    background-size: 80px;
+  }
+
+  #main {
+    @include box-center();
+    text-align: left;
+    width: 100%;
+    margin-top: 40px;
+    max-width: 640px;
+    line-height: 20px;
+    background-color: $white;
+    padding: 10px;
+    @include border-radius(5px);
+
+    h1 {
+      @include centered();
+      margin-bottom: 20px;
+
+      &.error {
+        color: $error;
+      }
+    }
+
+    .text {
+      @include box-center();
+      color: $text;
+    }
+
+    .text.center {
+      @include centered();
+      margin: 30px auto;
+    }
+
+    li {
+      margin: 10px 0 0 20px;
+
+      &.OS {
+        font-weight: 500;
+        color: $mepay-blue;
+      }
+    }
+
+    #OS {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: block;
+      float: left;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        @include clear();
+      }
+
+      li {
+        width: 32%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border: 1px solid $text2;
+        float: left;
+        border-right: 0;
+        text-align: center;
+        cursor: pointer;  
+        position: relative;
+
+
+        .vcenter {
+          margin: auto auto;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60%;
+        }
+
+        &.selected {
+          background-color: $text2;
+          color: $white;
+        }
+
+        &:first-child {
+          border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child {
+          border-radius: 0 5px 5px 0;
+          border-right: 1px solid $text2;
+        }
+      }
+    }
+
+    ol.noBullets {
+      list-style: decimal inside none;
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+    }
+
+    #continueRow {
+      @include centered();
+      min-height: 44px;
+      position: relative;
+      display: block;
+      max-width: 460px;
+      margin-top: 30px;
+      top: -20px;
+
+      .goBackLink {
+        display: inline-block;
+        color: #{$mepay-blue};
+        font-size: 14px;
+        height: 44px;
+        width: 44px;
+        background: url(#{$image-url}/button_icon_sprites.svg) 0 -315px no-repeat;
+        position: relative;
+        top: 32px;
+        overflow: hidden;
+        text-indent: -200%;
+      }
+
+      input[type=button]{
+        display: inline-block;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 0;
+        margin: 0 5px;
+        padding: 10px;
+        //height: 44px;
+        width: 45%;
+        position: relative;
+        top: 16px;
+        cursor: pointer;
+        @include super-break();
+
+        &.single {
+          width: 60%;
+          max-width: none;
+        }
+      }
+
+      input.cancel {
+        background-color: transparent;
+        color: $text2;
+      }
+    }
+
+    .step2 {
+      display: none;
+    }
+  }
+}
+
+
+@media #{$medium-up} {
+  #container.error {
+    #main {
+    }
+  }
+}
